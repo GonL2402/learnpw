@@ -1,0 +1,39 @@
+{
+  "cookies": [
+    {
+      "name": "OptanonAlertBoxClosed",
+      "value": "2025-08-11T06:13:05.565Z",
+      "domain": ".utest.com",
+      "path": "/",
+      "expires": 1786428785,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "OptanonConsent",
+      "value": "isGpcEnabled=0&datestamp=Mon+Aug+11+2025+13%3A13%3A05+GMT%2B0700+(Indochina+Time)&version=202404.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0004%3A1",
+      "domain": ".utest.com",
+      "path": "/",
+      "expires": 1786428785,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://utest.com",
+      "localStorage": [
+        {
+          "name": "wistia",
+          "value": "{\"__distillery\":\"1754892_0bf0089f-2469-4599-9523-b6fef5b946fa-460135b58-f073f61f5f10-08fe\"}"
+        },
+        {
+          "name": "ls.nextUtestHeartbeatPingDate",
+          "value": "1754892783430"
+        }
+      ]
+    }
+  ]
+}
