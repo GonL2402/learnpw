@@ -1,6 +1,5 @@
-//import {test as testWithFixture} from '../../_fixtures/utest-fixture';
+import {test as testWithFixture} from '../../_fixtures/utest-fixture';
 import { HomePage } from '@pages/utest/home-page/utest-home.page';
-// import { RegisterPage } from '@pages/utest/home-page/utest-register.page';
 import {test} from '@playwright/test';
 
 
@@ -15,12 +14,12 @@ test('Utest - access registeration page', async({page}) => {
     await homePage.verifyRegisterPageDisplay();
 });
 
-// testWithFixture('Utest - verify missing fields in registration step 1', async({homepage}) => {
-//     await homepage.open();
-//     await homepage.clickJoinNowButton();
+testWithFixture('Utest - verify missing fields in registration step 1', async({homepage}) => {
+    await homepage.open();
+    await homepage.clickJoinNowButton();
 
-//     const registerPage = new RegisterPage(homepage.page);
-//     await registerPage.clickOnNextLocationbutton();
+    const homePage = new HomePage(homepage.page);
+    await homePage.clickOnNextLocationbutton();
 
-//     //await homepage.page.pause();
-// });
+    //await homepage.page.pause();
+});
