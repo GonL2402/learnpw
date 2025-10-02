@@ -5,7 +5,7 @@ test('Launch Page', async ({ page }) => { //async ({ page } là callback functio
 
     await page.goto('https://www.utest.com'); // bất đồng bộ
 
-    //await page.locator('//a[text()="Join Now"]').click(); // như này chưa đúng vì phải tìm được element mới click, nếu không sẽ có trường hợp lỗi
+    await page.locator('//a[text()="Join Now"]').click(); // như này chưa đúng vì phải tìm được element mới click, nếu không sẽ có trường hợp lỗi
     
     await page.waitForTimeout(3000);
     const joinNow = page.locator('//a[text()="Join Now"]');
