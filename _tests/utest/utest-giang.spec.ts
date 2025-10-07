@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test, expect} from "@playwright/test";
 import { log } from 'console';
 
-test('Launch Page', async ({ page }) => { //async ({ page } là callback function, và callback function này là async
+/*test('Launch Page', async ({ page }) => { //async ({ page } là callback function, và callback function này là async
 
     await page.goto('https://www.utest.com'); // bất đồng bộ
 
@@ -62,4 +62,27 @@ async function expectErrorVisible(page: any, text: string, error: string) {
     }
 
 
-}
+}*/
+
+
+test('Launch Page', async ({ page }) => {
+    //Go to page
+    await page.goto('https://www.utest.com');
+    //Check Accept all cookies button available + Click
+    await page.locator('//button[text()="Accept All Cookies"]').click();
+
+    //Check Join Now is available + click
+    await page.locator('//a[text()="Join Now"]').click();
+
+    //Check "Next: Location" button + click
+    await page.locator('//span[text()="Next: Location"]').click();
+
+    await expect(page.locator('//span[@id="firstNameError"]')).toHaveText('First name is required');
+    await expect(page.locator('//span[@id="lastNameError"]')).toHaveText('Last name is required');
+    await expect(page.locator('//span[@id="emailError"]')).toHaveText('Enter valid email');
+    await expect(page.locator('//span[@id="birthDateError"]')).toHaveText('Date of birth is required');
+
+
+
+
+});
