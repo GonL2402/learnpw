@@ -6,7 +6,7 @@ test('Access Register page', async ({utestPage}) => {
 });
 
 test('Verify required fields on Register page', async ({registerPage}) => {
-    await registerPage.locator('button[id="onetrust-accept-btn-handler"]').click();
+    //await registerPage.locator('button[id="onetrust-accept-btn-handler"]').click();
     await expect(registerPage).toHaveURL(/.*signup\/personal/);
 
     await registerPage.locator('button[ng-click="validateBasicInfoStep(userForm);"]').click(); 
