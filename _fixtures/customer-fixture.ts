@@ -1,6 +1,9 @@
 import {test as base, BrowserContext, expect, Page} from '@playwright/test';
 import { HomePage } from '../_page-objects/utest/homePage';
 import { RegisterPage } from '../_page-objects/utest/registerPage';
+import fs from 'fs'
+import { parse } from 'csv-parse/sync';
+
 
 type CustomFixtures = 
 {
@@ -10,7 +13,9 @@ type CustomFixtures =
     pomRegisterPage: RegisterPage;
     context: BrowserContext;
     contextPage: Page;
-}
+    readCsvData: Record<string, string>[];
+    csvRow: (rowIndex: number) => Record<string, string>;
+};
 
 export const test = base.extend<CustomFixtures>({
     utestPage: async ({ page }, use) => {
